@@ -24,4 +24,4 @@
 
 # Plasmo Constants
 
-Public reusable constants/magic numbers used by Plasmo, including file paths, enums, and static typing.
+Public reusable constants/magic numbers used by [Plasmo](https://github.com/PlasmoHQ/plasmo), including file paths, enums, and static typing.
