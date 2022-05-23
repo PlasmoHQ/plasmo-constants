@@ -1,0 +1,16 @@
+{
+  "name": "@plasmo/constants",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@parcel/watcher": "2.0.5",
+    "@plasmo/utils": "workspace:*",
+    "@plasmo/config": "workspace:*"
+  }
+}
