@@ -29,6 +29,8 @@ export type ExtensionManifest = {
     open_in_tab?: boolean
   }
 
+  devtools_page?: string
+
   content_scripts?: ManifestContentScript[]
 
   background?: {
