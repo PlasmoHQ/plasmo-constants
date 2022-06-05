@@ -38,5 +38,11 @@ export type ExtensionManifest = {
     type?: "module"
   }
 
+  chrome_url_overrides?: {
+    newtab?: string
+    history?: string
+    bookmarks?: string
+  }
+
   host_permissions?: string[]
 }
