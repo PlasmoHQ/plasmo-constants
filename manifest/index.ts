@@ -12,6 +12,7 @@ export type ExtensionManifest = {
   name: string
   description: string
   author?: string
+  homepage_url?: string
 
   key?: string
 
