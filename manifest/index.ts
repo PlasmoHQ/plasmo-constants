@@ -2,6 +2,7 @@ import type { ManifestContentScript } from "./content-script"
 import type { ManifestPermission } from "./permission"
 
 export type { ManifestContentScript } from "./content-script"
+export * from "./icon"
 export { permissionMap } from "./permission"
 export type { ManifestPermission } from "./permission"
 
