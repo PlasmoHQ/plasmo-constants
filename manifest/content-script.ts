@@ -1,5 +1,9 @@
 export type ManifestContentScript = {
   matches: string[]
+  /**
+   * https://developer.chrome.com/docs/extensions/mv3/content_scripts/#matchAndGlob
+   */
+  exclude_matches?: string[]
   js?: string[]
 
   css?: string[]
