@@ -40,6 +40,13 @@ export type ExtensionManifest = {
     type?: "module"
   }
 
+  web_accessible_resources?: {
+    resources: string[]
+    matches: string[]
+    extension_ids?: string[]
+    use_dynamic_url?: boolean
+  }[]
+
   chrome_url_overrides?: {
     newtab?: string
     history?: string
