@@ -6,8 +6,7 @@ export * from "./icon"
 export { permissionMap } from "./permission"
 export type { ManifestPermission } from "./permission"
 
-export type ExtensionManifest = {
-  manifest_version: 3
+type BaseExtensionManifest = {
   version: string
 
   name: string
@@ -15,16 +14,12 @@ export type ExtensionManifest = {
   author?: string
   homepage_url?: string
 
-  key?: string
+  icons?: Record<string, string>
 
-  permissions?: ManifestPermission[]
+  key?: string
   update_url?: string
 
-  icons?: Record<string, string>
-  action?: {
-    default_icon?: Record<string, string>
-    default_popup?: string
-  }
+  permissions?: ManifestPermission[]
 
   options_ui?: {
     page: string
@@ -34,6 +29,23 @@ export type ExtensionManifest = {
   devtools_page?: string
 
   content_scripts?: ManifestContentScript[]
+
+  chrome_url_overrides?: {
+    newtab?: string
+    history?: string
+    bookmarks?: string
+  }
+}
+
+export type ExtensionManifest = BaseExtensionManifest & {
+  manifest_version: 3
+
+  host_permissions?: string[]
+
+  action?: {
+    default_icon?: Record<string, string>
+    default_popup?: string
+  }
 
   background?: {
     service_worker: string
@@ -46,12 +58,19 @@ export type ExtensionManifest = {
     extension_ids?: string[]
     use_dynamic_url?: boolean
   }[]
+}
 
-  chrome_url_overrides?: {
-    newtab?: string
-    history?: string
-    bookmarks?: string
+export type ExtensionManifestV2 = BaseExtensionManifest & {
+  manifest_version: 2
+
+  background?: {
+    scripts: string[]
   }
 
-  host_permissions?: string[]
+  browser_action?: {
+    default_icon?: Record<string, string>
+    default_popup?: string
+  }
+
+  web_accessible_resources?: string[]
 }
