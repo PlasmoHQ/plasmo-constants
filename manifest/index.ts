@@ -52,6 +52,11 @@ export type ExtensionManifest = BaseExtensionManifest & {
     type?: "module"
   }
 
+  content_security_policy?: {
+    extension_pages: string
+    sandbox: string
+  }
+
   web_accessible_resources?: {
     resources: string[]
     matches: string[]
@@ -71,6 +76,8 @@ export type ExtensionManifestV2 = BaseExtensionManifest & {
     default_icon?: Record<string, string>
     default_popup?: string
   }
+
+  content_security_policy?: string
 
   web_accessible_resources?: string[]
 }
