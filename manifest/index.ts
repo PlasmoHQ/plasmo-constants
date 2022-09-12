@@ -35,6 +35,14 @@ type BaseExtensionManifest = {
     history?: string
     bookmarks?: string
   }
+
+  browser_specific_settings?: {
+    gecko?: {
+      id: string
+      strict_min_version?: string
+      strict_max_version?: string
+    }
+  }
 }
 
 export type ExtensionManifest = BaseExtensionManifest & {
