@@ -41,6 +41,14 @@ type BaseExtensionManifest = {
       id: string
       strict_min_version?: string
       strict_max_version?: string
+      update_url?: string
+    }
+    edge?: {
+      browser_action_next_to_addressbar?: boolean
+    }
+    safari?: {
+      strict_min_version?: string
+      strict_max_version?: string
     }
   }
 }
