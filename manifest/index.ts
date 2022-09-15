@@ -16,6 +16,10 @@ type BaseExtensionManifest = {
 
   version_name?: string
 
+  plasmo?: {
+    version?: string
+  }
+
   icons?: Record<string, string>
 
   key?: string
@@ -57,7 +61,6 @@ type BaseExtensionManifest = {
 
 export type ExtensionManifest = BaseExtensionManifest & {
   manifest_version: 3
-
   host_permissions?: string[]
 
   action?: {
