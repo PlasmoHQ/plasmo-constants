@@ -14,6 +14,8 @@ type BaseExtensionManifest = {
   author?: string
   homepage_url?: string
 
+  version_name?: string
+
   icons?: Record<string, string>
 
   key?: string
