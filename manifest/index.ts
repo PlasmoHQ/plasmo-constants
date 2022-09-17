@@ -16,10 +16,6 @@ type BaseExtensionManifest = {
 
   version_name?: string
 
-  plasmo?: {
-    version?: string
-  }
-
   icons?: Record<string, string>
 
   key?: string
