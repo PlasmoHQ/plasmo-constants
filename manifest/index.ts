@@ -55,7 +55,7 @@ type BaseExtensionManifest = {
   }
 }
 
-export type ExtensionManifest = BaseExtensionManifest & {
+export type ExtensionManifestV3 = BaseExtensionManifest & {
   manifest_version: 3
   host_permissions?: string[]
 
@@ -98,3 +98,5 @@ export type ExtensionManifestV2 = BaseExtensionManifest & {
 
   web_accessible_resources?: string[]
 }
+
+export type ExtensionManifest = ExtensionManifestV2 | ExtensionManifestV3
