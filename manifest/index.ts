@@ -24,6 +24,8 @@ type BaseExtensionManifest = {
 
   icons?: Record<string, string>
 
+  default_locale?: string
+
   key?: string
   update_url?: string
 
