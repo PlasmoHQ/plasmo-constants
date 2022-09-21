@@ -11,4 +11,11 @@ export type ManifestContentScript = {
    * https://developer.chrome.com/docs/extensions/mv3/content_scripts/#run_time
    */
   run_at?: "document_start" | "document_end" | "document_idle"
+
+  /**
+   * https://developer.chrome.com/docs/extensions/mv3/content_scripts/#matchAndGlob
+   */
+  exclude_matches?: string[]
+  exclude_globs?: string[]
+  include_globs?: string[]
 }
