@@ -21,6 +21,7 @@ type BaseExtensionManifest = {
   homepage_url?: string
 
   version_name?: string
+  short_name?: string
 
   icons?: Record<string, string>
 
@@ -29,6 +30,7 @@ type BaseExtensionManifest = {
   key?: string
   update_url?: string
 
+  options_page?: string
   options_ui?: {
     page: string
     open_in_tab?: boolean
@@ -37,6 +39,24 @@ type BaseExtensionManifest = {
   devtools_page?: string
 
   content_scripts?: ManifestContentScript[]
+
+  commands?: Record<
+    string,
+    {
+      suggested_key:
+        | string
+        | {
+            default?: string
+            mac?: string
+            linux?: string
+            windows?: string
+            chromeos?: string
+            android?: string
+            ios?: string
+          }
+      description?: string
+    }
+  >
 
   chrome_url_overrides?: {
     newtab?: string
