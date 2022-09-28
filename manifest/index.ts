@@ -7,7 +7,7 @@ export { permissionMap } from "./permission"
 export type { ManifestPermission } from "./permission"
 
 type ExtensionManifestAction = {
-  default_icon?: string
+  default_icon?: string | Record<string, string>
   default_popup?: string
   default_title?: string
 }
