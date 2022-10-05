@@ -12,6 +12,14 @@ type ExtensionManifestAction = {
   default_title?: string
 }
 
+export type ChromeUrlOverrides = {
+  newtab: string
+  history: string
+  bookmarks: string
+}
+
+export type ChromeUrlOverrideType = keyof ChromeUrlOverrides
+
 type BaseExtensionManifest = {
   version: string
 
@@ -58,11 +66,7 @@ type BaseExtensionManifest = {
     }
   >
 
-  chrome_url_overrides?: {
-    newtab?: string
-    history?: string
-    bookmarks?: string
-  }
+  chrome_url_overrides?: Partial<ChromeUrlOverrides>
 
   browser_specific_settings?: {
     gecko?: {
