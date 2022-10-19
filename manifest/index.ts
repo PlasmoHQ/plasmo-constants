@@ -126,6 +126,7 @@ export type ExtensionManifestV2 = BaseExtensionManifest & {
   }
 
   browser_action?: ExtensionManifestAction
+  page_action?: ExtensionManifestAction
 
   content_security_policy?: string
 
