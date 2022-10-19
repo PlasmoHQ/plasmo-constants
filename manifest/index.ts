@@ -20,6 +20,22 @@ export type ChromeUrlOverrides = {
 
 export type ChromeUrlOverrideType = keyof ChromeUrlOverrides
 
+export type BrowserSpecificSettings = {
+  gecko?: {
+    id: string
+    strict_min_version?: string
+    strict_max_version?: string
+    update_url?: string
+  }
+  edge?: {
+    browser_action_next_to_addressbar?: boolean
+  }
+  safari?: {
+    strict_min_version?: string
+    strict_max_version?: string
+  }
+}
+
 type BaseExtensionManifest = {
   version: string
 
@@ -66,23 +82,13 @@ type BaseExtensionManifest = {
     }
   >
 
+  incognito?: "spanning" | "split" | "not_allowed"
+
   chrome_url_overrides?: Partial<ChromeUrlOverrides>
 
-  browser_specific_settings?: {
-    gecko?: {
-      id: string
-      strict_min_version?: string
-      strict_max_version?: string
-      update_url?: string
-    }
-    edge?: {
-      browser_action_next_to_addressbar?: boolean
-    }
-    safari?: {
-      strict_min_version?: string
-      strict_max_version?: string
-    }
-  }
+  browser_specific_settings?: BrowserSpecificSettings
+
+  applications?: BrowserSpecificSettings
 }
 
 export type ExtensionManifestV3 = BaseExtensionManifest & {
