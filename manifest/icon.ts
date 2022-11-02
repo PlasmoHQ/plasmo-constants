@@ -8,5 +8,8 @@ export const iconMimeTypeMap = {
 
 export type ValidIconMimeType = keyof typeof iconMimeTypeMap
 
-export const validIconMimeTypes = Object.keys(iconMimeTypeMap)
-export const validIconMimeTypeSet = new Set(validIconMimeTypes)
+export const validIconExtList = Object.keys(iconMimeTypeMap)
+export const validIconExtSet = new Set(validIconExtList)
+
+export const validIconMimeTypeList = Object.values(iconMimeTypeMap)
+export const validIconMimeTypeSet = new Set(validIconMimeTypeList)
