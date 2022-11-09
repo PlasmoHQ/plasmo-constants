@@ -9,8 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@parcel/watcher": "2.0.5",
-    "@plasmo/utils": "workspace:*",
-    "@plasmo/config": "workspace:*"
+    "@parcel/watcher": "2.0.7",
+    "@plasmo/config": "workspace:*",
+    "@plasmo/utils": "workspace:*"
   }
 }
