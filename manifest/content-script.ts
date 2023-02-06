@@ -7,6 +7,9 @@ export type ManifestContentScript = {
   match_about_blank?: boolean
   match_origin_as_fallback?: boolean
   all_frames?: boolean
+
+  world?: "ISOLATED" | "MAIN"
+
   /**
    * https://developer.chrome.com/docs/extensions/mv3/content_scripts/#run_time
    */
