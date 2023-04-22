@@ -4,9 +4,10 @@ export const iconMimeTypeMap = {
   jpg: "image/jpeg",
   jpeg: "image/jpeg",
   png: "image/png"
-}
+} as const
 
 export type ValidIconMimeType = keyof typeof iconMimeTypeMap
+export type ValidIconMimeTypeValue = (typeof iconMimeTypeMap)[ValidIconMimeType]
 
 export const validIconExtList = Object.keys(iconMimeTypeMap)
 export const validIconExtSet = new Set(validIconExtList)
