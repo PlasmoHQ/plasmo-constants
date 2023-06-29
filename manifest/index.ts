@@ -103,6 +103,10 @@ export type ExtensionManifestV3 = BaseExtensionManifest & {
     type?: "module"
   }
 
+  side_panel?: {
+    default_path?: string
+  }
+
   content_security_policy?: {
     extension_pages: string
     sandbox?: string
