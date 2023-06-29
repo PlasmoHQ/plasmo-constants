@@ -60,6 +60,10 @@ type BaseExtensionManifest = {
     open_in_tab?: boolean
   }
 
+  sidebar_action?: {
+    default_panel: string
+  }
+
   devtools_page?: string
 
   content_scripts?: ManifestContentScript[]
