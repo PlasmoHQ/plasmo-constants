@@ -122,6 +122,8 @@ export type ExtensionManifestV3 = BaseExtensionManifest & {
     extension_ids?: string[]
     use_dynamic_url?: boolean
   }[]
+
+  overrides: Record<typeof process.env.PLASMO_BROWSER, ExtensionManifestV3>
 }
 
 export type ExtensionManifestV2 = BaseExtensionManifest & {
@@ -139,6 +141,7 @@ export type ExtensionManifestV2 = BaseExtensionManifest & {
   content_security_policy?: string
 
   web_accessible_resources?: string[]
+  overrides: Record<typeof process.env.PLASMO_BROWSER, ExtensionManifestV2>
 }
 
 export type ExtensionManifest = ExtensionManifestV2 | ExtensionManifestV3
